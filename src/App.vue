@@ -1,18 +1,19 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<div class="font-mont bg-primary h-screen">
+    <Nav />
+    <transition name="page">
+    <router-view>
+    </router-view>
+    </transition>
+</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import Nav from './components/Nav.vue';
 
 export default {
+  components: { Nav },
   name: 'App',
-  components: {
-    HelloWorld,
-  },
 };
 </script>
 
@@ -24,5 +25,28 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.page-enter-active, .view-leave-active {
+  transition: opacity 0.7s ease-out, transform 0.7s ease-in-out;
+}
+.page-enter-active {
+  transition-delay: 0s;
+}
+.page-enter {
+  opacity: 0;
+  /* transform: translateY(200px); */
+}
+.page-enter-to {
+  opacity: 1;
+  /* transform: translateY(0px); */
+}
+.page-leave {
+  opacity: 1;
+  /* transform: translateY(0px); */
+}
+.page-leave-to {
+  opacity: 0;
+  /* transform: translateY(-200px); */
 }
 </style>

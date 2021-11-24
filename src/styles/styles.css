@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.backdrop-image {
+    @apply h-screen w-full filter saturate-0 max-h-screen relative top-0 object-cover
+    opacity-50
+}
+
+.card-rating {
+    @apply text-white border-2 absolute bottom-8 m-4 rounded-full opacity-70 bg-opacity-40 px-4
+    font-mont font-bold text-2xl left-1/2 transform -translate-x-1/2 sm:m-6 bg-black
+}
+
+.cards-grid {
+    @apply grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 justify-items-center
+}
+
+.info-box {
+    @apply h-1/2 w-1/2 border-8 border-black absolute top-1/2 left-1 transform overflow-auto
+    -translate-y-1/2 text-lg sm:text-xl xl:text-2xl font-bold font-src align-middle text-center
+    flex flex-col px-1 md:px-10 divide-y-4 divide-black divide-double
+}
+
+.movie-poster {
+    @apply relative object-cover opacity-100 hover:opacity-40 transition ease-out duration-700
+}
+
+.movie-title {
+    @apply h-1/4 w-auto max-w-2xl xl:max-w-4xl m-4 overflow-hidden absolute top-1/2 -right-2
+    float-right transform -translate-y-1/2 text-2xl sm:text-2xl lg:text-4xl xl:text-6xl font-bold
+    font-src align-middle text-center flex flex-col rotate-90 px-10 mx-4
+}
+
+.nav-bar {
+    @apply bg-primary h-32 border-b-8 border-secondary border-double flex flex-col
+    border-opacity-60
+}
+
+.nav-header {
+    @apply block text-2xl sm:text-4xl md:text-6xl ml-12 text-left align-middle opacity-60
+      my-auto justify-center font-black text-secondary select-none
+}
+
+.photo-card {
+    @apply bg-black rounded-lg overflow-hidden max-w-xl max-h-full relative sm:shadow-2xl w-96
+    transform hover:scale-105 transition ease-out duration-500
+}
+
+.search-input {
+    @apply w-96 h-14 text-xl font-mont m-10 rounded-full shadow-2xl border-2 font-bold border-gray-300
+    focus:ring-4 focus:ring-gray-400 focus:ring-opacity-20 p-2 px-4 transition ease-out duration-1000
+}
