@@ -5,8 +5,8 @@ import Vuex from 'vuex';
 Vue.use(Vuex);
 
 // url for api get request
-const apiEndpoint = `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.VUE_APP_API_KEY}
-&language=en-US&include_adult=false&include_video=false&page=1&external_source=imdb_id&sort_by=popularity.desc`;
+const apiEndpoint = `https://api.themoviedb.org/3/movie/top_rated?api_key=${process.env.VUE_APP_API_KEY}
+&total_results=100&language=en-US&include_adult=false&include_video=false&page=1&external_source=imdb_i&sort_by=popularity.desc`;
 
 const store = new Vuex.Store({
   state: {
