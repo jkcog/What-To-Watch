@@ -17,9 +17,7 @@ const store = new Vuex.Store({
   getters: {},
   mutations: {
     setMovies(state, payload) {
-      console.log('payload: ', payload);
       state.movies = payload;
-      console.log('store state: ', state.movies);
     },
   },
   actions: {

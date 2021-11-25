@@ -1,5 +1,5 @@
 <template>
-<div class="font-mont bg-primary h-screen">
+<div class="font-mont bg-primary h-screen w-screen">
     <Nav />
     <transition name="page">
     <router-view>
@@ -28,7 +28,7 @@ export default {
 }
 
 .page-enter-active, .view-leave-active {
-  transition: opacity 0.7s ease-out, transform 0.7s ease-in-out;
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
 }
 .page-enter-active {
   transition-delay: 0s;
