@@ -1,4 +1,5 @@
 <template>
+<!-- Navigation bar -->
   <div class="nav-bar">
       <router-link :to="'/'" class="align-middle my-auto">
       <h1 class="nav-header">

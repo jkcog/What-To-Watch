@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- render movie list to homepage -->
     <movie-list />
   </div>
 </template>

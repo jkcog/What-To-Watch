@@ -10,11 +10,5 @@ module.exports = {
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
-    //new
-    "linebreak-style": "off",
-    "no-unused-vars": "off",
-    "no-multiple-empty-lines": "off",
-    "no-undef": "off",
-    "import/prefer-default-export": "off"
   },
 };

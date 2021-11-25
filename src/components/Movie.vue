@@ -1,16 +1,18 @@
 <template>
+<!-- Individual movie detail page -->
 <div class="bg-gray-900">
   <div v-if="movie"
   class="bg-gray-400">
+  <!-- movie backdrop -->
     <img class="backdrop-image"
     :src="`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`" />
     <div
     class="info-box">
     <div class="my-auto">
+      <!-- movie info -->
     <p>{{ movie.overview }}</p>
     <p class="mt-8 text-xl">{{ movie.vote_average }}/10</p>
     </div>
-
     <div class="mt-auto mb-1 text-lg">
     <p>{{ movie.release_date }}</p>
     </div>
@@ -25,6 +27,8 @@
 </template>
 
 <script>
+import movieFetchMixin from '../mixins/movieFetchMixin';
+
 export default {
   data() {
     return {
@@ -32,18 +36,14 @@ export default {
       movie: null,
     };
   },
-  computed: {
-    movies() {
-      return this.$store.state.movies;
-    },
-  },
+  // mixins for fetching movies from central data store
+  mixins: [movieFetchMixin],
   mounted() {
-    console.log('here are the movies: ', this.$store.state.movies);
-    console.log('this.movies: ', this.movies);
+    // If no movie data found in state, redirect to home to fetch data
     if (!this.$store.state.movies.length) {
-      console.log('no movies found');
       this.$router.push({ path: '/' });
     }
+    // else select the required movie from the data
     this.movie = this.movies[this.id];
   },
 };

@@ -1,5 +1,6 @@
 <template>
 <div class="font-mont bg-primary h-screen w-screen">
+  <!-- Navigation bar -->
     <Nav />
     <transition name="page">
     <router-view>
@@ -18,15 +19,7 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-
+/* page transition fade animation */
 .page-enter-active, .view-leave-active {
   transition: opacity 0.9s ease-out, transform 0.9s ease-out;
 }
@@ -35,18 +28,14 @@ export default {
 }
 .page-enter {
   opacity: 0;
-  /* transform: translateY(200px); */
 }
 .page-enter-to {
   opacity: 1;
-  /* transform: translateY(0px); */
 }
 .page-leave {
   opacity: 1;
-  /* transform: translateY(0px); */
 }
 .page-leave-to {
   opacity: 0;
-  /* transform: translateY(-200px); */
 }
 </style>
