@@ -1,24 +1,9 @@
-# edaptio-code-challenge
+# What to Watch
 
-## Project setup
-```
-npm install
-```
+##### Web application to display and search through the most popular movies using [TMDB](https://www.themoviedb.org) API
+* * *
+A demo can be found at [here](https://immense-river-66873.herokuapp.com/)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+<br />
+Built with Vue.js, Tailwind CSS. 
