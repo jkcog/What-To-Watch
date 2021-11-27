@@ -6,4 +6,4 @@ A demo can be found at [here](https://immense-river-66873.herokuapp.com/)
 
 
 <br />
-Built with Vue.js, Tailwind CSS. 
+Built with Vue.js and Tailwind CSS. 
